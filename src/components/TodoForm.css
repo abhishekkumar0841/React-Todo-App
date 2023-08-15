@@ -1,0 +1,33 @@
+.formContainer{
+    /* margin-top: 2rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    padding: 1rem ;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.formInput{
+    width: 80%;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #66197c;
+}
+
+.addTodoBtn{
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    background: #66197c;
+    color: white;
+}

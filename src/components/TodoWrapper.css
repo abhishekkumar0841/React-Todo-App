@@ -1,0 +1,24 @@
+.listContainer{
+    padding: 2rem;
+    display: flex;
+    margin-top: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.myDiv{
+    position: relative;
+    background: #24273d;
+    border-radius: 1rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1rem;
+    padding: 1rem;
+    min-width: 300px;
+    width: 300px;
+}

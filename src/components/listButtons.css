@@ -1,0 +1,11 @@
+.listButtons{
+    cursor: pointer;
+    background: #3425ac;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
