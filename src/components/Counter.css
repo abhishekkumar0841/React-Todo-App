@@ -1,5 +1,5 @@
 .counter{
-    background: #fff;
+    background: #24273d;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
@@ -9,7 +9,7 @@
     font-weight: bolder;
     font-size: 1.5rem;
     padding: 1rem;
-    color: #24273d;
+    color: #fff;
     position: absolute;
     top: -1rem;
     left: -1rem;

@@ -3,8 +3,8 @@ import TodoForm from "./TodoForm";
 import TodoLists from "./TodoLists";
 import "./TodoWrapper.css";
 import ListButtons from "./ListButtons";
-import ShowStatus from "./ShowStatus";
 import Counter from "./Counter";
+import TodoStatus from "./TodoStatus";
 const TodoWrapper = () => {
   const [inputValue, setInputValue] = useState("");
   const [todoLists, setTodoLists] = useState([]);
@@ -21,10 +21,7 @@ const TodoWrapper = () => {
   }
 
   function updateHandler(id){
-    // const updateStatus = todoLists.filter((t, idx)=>{
-    //   return id == idx
-    //  })
-     setStatus("cpml")
+
   }
 
   function removeHandler(id){
@@ -50,8 +47,8 @@ const TodoWrapper = () => {
             <div className="myDiv" key={idx}>
               <Counter count={idx + 1} />
                <TodoLists todo={todo} />
-              <ShowStatus status={status} />
-              <ListButtons listButtonsValue="Update Status" onclick={updateHandler} />
+              <TodoStatus status={status} />
+              <ListButtons listButtonsValue="Update Status" onclick={(e)=>console.log(e.target.value)} />
               <ListButtons listButtonsValue="Remove" onclick={()=>removeHandler(idx)} />
             </div>
           );
