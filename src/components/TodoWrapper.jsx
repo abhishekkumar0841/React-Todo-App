@@ -13,15 +13,19 @@ const TodoWrapper = () => {
 
   function addBtnClick(e) {
     e.preventDefault();
-    setTodoLists([...todoLists, inputValue]);
-    setInputValue("");
+    if (inputValue === '') {
+      alert("Write Some Todo First..")
+    } else {
+      setTodoLists([...todoLists, inputValue]);
+      setInputValue("");
+    }
   }
 
-  function removeHandler(id){
-    const updateTodo = todoLists.filter((t, idx)=> {
-      return id !== idx 
-    })
-    setTodoLists(updateTodo)
+  function removeHandler(id) {
+    const updateTodo = todoLists.filter((t, idx) => {
+      return id !== idx;
+    });
+    setTodoLists(updateTodo);
   }
 
   return (
@@ -35,11 +39,17 @@ const TodoWrapper = () => {
       </div>
 
       <div className="listContainer">
-        {  todoLists.map((todo, idx) => {
-          return <TodoControler key={idx} id={idx} todo={todo} removeHandler={removeHandler}  />
+        {todoLists.map((todo, idx) => {
+          return (
+            <TodoControler
+              key={idx}
+              id={idx}
+              todo={todo}
+              removeHandler={removeHandler}
+            />
+          );
         })}
       </div>
-
     </div>
   );
 };

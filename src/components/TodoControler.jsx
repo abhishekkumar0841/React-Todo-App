@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './TodoControler.css'
 import Counter from './Counter';
 import TodoLists from './TodoLists';
 import TodoStatus from './TodoStatus';
@@ -8,9 +9,8 @@ const TodoControler = ({ id, removeHandler, todo }) => {
 
   const [status, setStatus] = useState("Pending")
 
-
   return (
-    <div className="myDiv">
+    <div className="todoControler">
       <Counter count={id + 1} />
        <TodoLists todo={todo} />
       <TodoStatus status={status} />

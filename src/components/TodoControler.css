@@ -1,0 +1,13 @@
+.todoControler{
+    position: relative;
+    background: #24273d;
+    border-radius: 1rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    min-width: 300px;
+    width: 300px;
+}
