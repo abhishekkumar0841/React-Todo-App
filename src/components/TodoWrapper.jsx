@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import TodoForm from "./TodoForm";
-import TodoLists from "./TodoLists";
 import "./TodoWrapper.css";
-import ListButtons from "./ListButtons";
-import Counter from "./Counter";
-import TodoStatus from "./TodoStatus";
+import TodoControler from "./TodoControler";
+
 const TodoWrapper = () => {
   const [inputValue, setInputValue] = useState("");
   const [todoLists, setTodoLists] = useState([]);
-  const [status, setStatus] = useState("pending");
 
   function onChange(e) {
     setInputValue(e.target.value);
@@ -18,10 +15,6 @@ const TodoWrapper = () => {
     e.preventDefault();
     setTodoLists([...todoLists, inputValue]);
     setInputValue("");
-  }
-
-  function updateHandler(id){
-
   }
 
   function removeHandler(id){
@@ -42,18 +35,11 @@ const TodoWrapper = () => {
       </div>
 
       <div className="listContainer">
-        {todoLists.map((todo, idx) => {
-          return (
-            <div className="myDiv" key={idx}>
-              <Counter count={idx + 1} />
-               <TodoLists todo={todo} />
-              <TodoStatus status={status} />
-              <ListButtons listButtonsValue="Update Status" onclick={(e)=>console.log(e.target.value)} />
-              <ListButtons listButtonsValue="Remove" onclick={()=>removeHandler(idx)} />
-            </div>
-          );
+        {  todoLists.map((todo, idx) => {
+          return <TodoControler key={idx} id={idx} todo={todo} removeHandler={removeHandler}  />
         })}
       </div>
+
     </div>
   );
 };
